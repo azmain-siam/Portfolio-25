@@ -1,15 +1,39 @@
+"use client";
+
 import { cn } from "@/lib/utils";
 import { Spotlight } from "../ui/Spotlight";
 import { TextGenerateEffect } from "../ui/text-generate-effect";
 import MagicButton from "../ui/MagicButton";
 import { ArrowRight } from "lucide-react";
+import ArrowDown from "./ArrowDown";
+import { motion } from "motion/react";
 
 const Hero = () => {
+  const containerVariants = {
+    hidden: {},
+    show: {
+      transition: {
+        staggerChildren: 0.2, // delay between each child animation
+      },
+    },
+  };
+
+  const childVariants = {
+    hidden: { opacity: 0, y: 15 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: [0, 0.71, 0.2, 1.01],
+      },
+    },
+  };
   return (
-    <div className="flex flex-col justify-center items-center h-screen w-full">
+    <div className="flex relative flex-col justify-center items-center h-screen w-full">
       <div>
         <Spotlight
-          className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
+          className="-top-40 -left-10 md:-left-32 md:-top-10 h-screen"
           fill="white"
         ></Spotlight>
         <Spotlight
@@ -26,7 +50,7 @@ const Hero = () => {
         <div
           className={cn(
             "absolute inset-0",
-            "[background-size:90px_90px]",
+            "[background-size:70px_70px]",
             "dark:[background-image:linear-gradient(to_right,#bec1dd10_2px,transparent_2px),linear-gradient(to_bottom,#bec1dd10_2px,transparent_2px)]",
             "[background-image:linear-gradient(to_right,#e4e4e7_1px,transparent_1px),linear-gradient(to_bottom,#e4e4e7_1px,transparent_1px)]"
           )}
@@ -35,28 +59,45 @@ const Hero = () => {
         <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black-100"></div>
       </div>
 
-      <div className="flex justify-center relative my-20 z-10">
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        animate="show"
+        className="flex justify-center relative my-20 z-10"
+      >
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
-          <h2 className="uppercase tracking-widest text-sm text-center text-blue-100">
+          <motion.h2
+            variants={childVariants}
+            className="uppercase tracking-widest text-sm text-center text-blue-100"
+          >
             Full-stack solutions with modern technologies
-          </h2>
+          </motion.h2>
 
-          <TextGenerateEffect
-            className="text-center text-4xl md:text-5xl lg:text-5xl max-w-[700px]"
-            words="Transforming Ideas into Powerful Digital Experiences."
-          />
+          <motion.div variants={childVariants}>
+            <TextGenerateEffect
+              className="text-center text-4xl md:text-5xl lg:text-5xl max-w-[700px]"
+              words="Transforming Ideas into Powerful Digital Experiences."
+            />
+          </motion.div>
 
-          <p className="text-center md:tracking-wider mb-6 text-sm md:text-lg lg:text-2xl">
+          <motion.p
+            variants={childVariants}
+            className="text-center md:tracking-wider mb-6 text-sm md:text-lg lg:text-2xl"
+          >
             Hi! I&apos;m Siam, a Full-Stack Developer based in Bangladesh.
-          </p>
+          </motion.p>
 
-          <MagicButton
-            title="Show my works"
-            icon={<ArrowRight size={16} />}
-            position="right"
-          />
+          <motion.div variants={childVariants}>
+            <MagicButton
+              title="View my works"
+              icon={<ArrowRight size={16} />}
+              position="right"
+            />
+          </motion.div>
         </div>
-      </div>
+      </motion.div>
+
+      <ArrowDown />
     </div>
   );
 };
