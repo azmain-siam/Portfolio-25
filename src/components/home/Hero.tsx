@@ -1,7 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { Spotlight } from "../ui/Spotlight";
+import { Spotlight } from "../ui/Spotlight1";
 import { TextGenerateEffect } from "../ui/text-generate-effect";
 import MagicButton from "../ui/MagicButton";
 import { ArrowRight } from "lucide-react";
