@@ -4,8 +4,9 @@ import { useEffect, useRef } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
 import { BackgroundBeamsWithCollision } from "../ui/background-beams-with-collision";
+import MagicButton from "../ui/MagicButton";
+import { ArrowRight } from "lucide-react";
 
 export default function ContactSection() {
   const ref = useRef(null);
@@ -17,7 +18,7 @@ export default function ContactSection() {
   }, [isInView, controls]);
 
   return (
-    <div className="w-full px-4 relative my-10">
+    <div id="contact" className="w-full px-4 relative my-10">
       <BackgroundBeamsWithCollision>
         <section ref={ref} className="relative w-full py-24 overflow-hidden">
           {/* SVG Icon with path drawing */}
@@ -66,9 +67,11 @@ export default function ContactSection() {
               <Input placeholder="Your Name" />
               <Input placeholder="Your Email" type="email" />
               <Textarea placeholder="Your Message..." />
-              <Button type="submit" className="w-full">
-                Send Message
-              </Button>
+              <MagicButton
+                position="right"
+                title="Send Message"
+                icon={<ArrowRight size={16} />}
+              />
             </form>
           </motion.div>
         </section>
