@@ -18,7 +18,7 @@ export default function ContactSection() {
   }, [isInView, controls]);
 
   return (
-    <div id="contact" className="w-full px-4 relative my-10">
+    <div id="contact" className="w-full px-4 relative">
       <BackgroundBeamsWithCollision>
         <section ref={ref} className="relative w-full py-24 overflow-hidden">
           {/* SVG Icon with path drawing */}
@@ -76,12 +76,6 @@ export default function ContactSection() {
           </motion.div>
         </section>
       </BackgroundBeamsWithCollision>
-      <div className="relative">
-        <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-[90%] blur-sm" />
-        <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-[90%]" />
-        <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-700 to-transparent h-[2px] w-1/4 blur-sm" />
-        <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-700 to-transparent h-px w-1/4" />
-      </div>
     </div>
   );
 }

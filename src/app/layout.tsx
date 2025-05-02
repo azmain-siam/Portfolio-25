@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ui/theme-provider";
-import { NavbarDemo } from "@/components/shared/Navbar";
+import { Navbar } from "@/components/shared/Navbar";
+import { Footer } from "@/components/shared/Footer";
 
 const outfit = Outfit({
   weight: ["300", "400", "500", "600", "700", "800"],
@@ -27,8 +28,9 @@ export default function RootLayout({
           defaultTheme="dark"
           disableTransitionOnChange
         >
-          <NavbarDemo />
+          <Navbar />
           {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
