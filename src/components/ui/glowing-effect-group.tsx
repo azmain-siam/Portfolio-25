@@ -4,7 +4,10 @@ import { useRef, useState, useCallback } from "react";
 import React from "react";
 
 interface GlowingCardGroupProps {
-  children: React.ReactElement[];
+  children: React.ReactElement<{
+    sharedMouse?: { position: { x: number; y: number }; active: boolean };
+    parentRef?: React.RefObject<HTMLDivElement>;
+  }>[];
 }
 
 export const GlowingCardGroup = ({ children }: GlowingCardGroupProps) => {
@@ -37,7 +40,7 @@ export const GlowingCardGroup = ({ children }: GlowingCardGroupProps) => {
       {children.map((child, index) =>
         React.cloneElement(child, {
           sharedMouse: { position: mousePosition, active: isHovering },
-          parentRef: containerRef,
+          parentRef: containerRef as React.RefObject<HTMLDivElement>,
           key: index,
         })
       )}

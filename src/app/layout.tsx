@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ui/theme-provider";
+import { NavbarDemo } from "@/components/shared/Navbar";
 
-const geistSans = Outfit({
+const outfit = Outfit({
   weight: ["300", "400", "500", "600", "700", "800"],
   subsets: ["latin"],
 });
@@ -20,12 +21,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${geistSans.className} antialiased bg-black-100`}>
+      <body className={`${outfit.className} antialiased bg-black-100`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
           disableTransitionOnChange
         >
+          <NavbarDemo />
           {children}
         </ThemeProvider>
       </body>
