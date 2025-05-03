@@ -24,7 +24,7 @@ export default function ContactSection() {
       <BackgroundBeamsWithCollision>
         <section
           ref={ref}
-          className="relative flex justify-between items-center w-full py-24 overflow-hidden"
+          className="relative flex flex-col gap-16 md:flex-row justify-between items-center w-full py-24 overflow-hidden"
         >
           {/* SVG Icon with path drawing */}
           <div>

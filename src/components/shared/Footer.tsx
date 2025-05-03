@@ -4,12 +4,16 @@ import { Github, Linkedin, Mail, Twitter } from "lucide-react";
 export function Footer() {
   return (
     <section>
-      <div className="relative w-[85%] mx-auto md:w-full">
-        <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-[90%] blur-sm" />
-        <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-[90%]" />
-        <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-700 to-transparent h-[2px] w-1/4 blur-sm" />
-        <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-700 to-transparent h-px w-1/4" />
+      <div className="relative w-full">
+        {/* Main Indigo Line */}
+        <div className="absolute left-12 right-12 md:left-60 md:right-60 top-0 bg-gradient-to-r from-transparent via-sky-700/80 to-transparent h-[2px] blur-sm" />
+        <div className="absolute left-4 right-4 md:left-20 md:right-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] blur-sm" />
+        <div className="absolute left-4 right-4 md:left-20 md:right-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px" />
+
+        {/* Highlight Sky Line */}
+        <div className="absolute left-12 right-12 md:left-60 md:right-60 top-0 bg-gradient-to-r from-transparent via-sky-700/50  to-transparent h-px" />
       </div>
+
       <footer className="py-12">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">

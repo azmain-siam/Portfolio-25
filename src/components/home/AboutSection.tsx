@@ -28,104 +28,90 @@ const AboutSection = () => {
               />
               <div className="prose prose-invert max-w-none">
                 <p className="text-lg text-gray-300 mb-6">
-                  I&apos;m a passionate web developer with over 5 years of
-                  experience building modern, responsive, and user-friendly web
-                  applications. My journey in web development started with a
-                  curiosity about how websites work, which quickly evolved into
-                  a deep passion for creating digital experiences that make a
-                  difference.
-                </p>
-                <p className="text-lg text-gray-300 mb-6">
-                  I specialize in frontend development with React and Next.js,
-                  but I&apos;m also proficient in backend technologies like
-                  Node.js and Express. I believe in writing clean, maintainable
-                  code and staying up-to-date with the latest industry trends
-                  and best practices.
-                </p>
-                <p className="text-lg text-gray-300">
-                  When I&apos;m not coding, you can find me exploring new
-                  technologies, contributing to open-source projects, or sharing
-                  my knowledge through blog posts and tutorials.
+                  I&apos;m a dedicated Web Developer with 1+ years of
+                  professional experience, specializing in building modern,
+                  scalable, and user-friendly web applications. I work primarily
+                  with React, Next.js, TypeScript, and Tailwind CSS, and have
+                  hands-on experience with backend tools like Node.js, Express,
+                  and MongoDB. I care deeply about writing clean, maintainable
+                  code and crafting seamless user experiences. My goal is to
+                  turn ideas into reliable digital products while constantly
+                  learning and improving as a developer.
                 </p>
               </div>
-            </ScrollReveal>
-
-            {/* Education */}
-            <ScrollReveal delay={0.2} className="mt-16">
-              <h3 className="text-2xl font-bold mb-6">Education</h3>
-              <Card className="bg-black/40 border-purple-500/20">
-                <CardContent className="p-6">
-                  <div className="mb-6 last:mb-0">
-                    <h4 className="text-xl font-semibold text-purple-400">
-                      Master of Computer Science
-                    </h4>
-                    <p className="text-gray-400">Stanford University</p>
-                    <p className="text-sm text-gray-500">2018 - 2020</p>
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-semibold text-purple-400">
-                      Bachelor of Science in Computer Engineering
-                    </h4>
-                    <p className="text-gray-400">
-                      Massachusetts Institute of Technology
-                    </p>
-                    <p className="text-sm text-gray-500">2014 - 2018</p>
-                  </div>
-                </CardContent>
-              </Card>
             </ScrollReveal>
 
             {/* Work Experience */}
             <ScrollReveal delay={0.3} className="mt-16">
               <h3 className="text-2xl font-bold mb-6">Work Experience</h3>
-              <Card className="bg-black/40 border-purple-500/20">
+              <Card className="bg-black/25 border-purple-500/20">
                 <CardContent className="p-6">
                   <div className="mb-8 last:mb-0">
                     <div className="flex justify-between items-start mb-2">
-                      <h4 className="text-xl font-semibold text-purple-400">
-                        Senior Frontend Developer
+                      <h4 className="text-xl font-semibold text-purple-300">
+                        Web Developer
                       </h4>
-                      <Badge className="bg-purple-500/20 text-purple-400 hover:bg-purple-500/30">
+                      <Badge className="bg-purple-500/20 text-purple-300 hover:bg-purple-500/30">
                         Current
                       </Badge>
                     </div>
-                    <p className="text-gray-400">Tech Innovations Inc.</p>
-                    <p className="text-sm text-gray-500 mb-3">2021 - Present</p>
+                    <p className="text-gray-300">HAMS Fly Limited</p>
+                    <p className="text-sm text-gray-500 mb-3">
+                      Nov 2024 - Present
+                    </p>
                     <ul className="list-disc list-inside text-gray-300 space-y-2">
                       <li>
-                        Lead a team of 5 frontend developers in building a SaaS
-                        platform
+                        Built and maintained dynamic web pages using React.js
+                        and Next.js for the company’s flight booking platform.
                       </li>
                       <li>
-                        Implemented CI/CD pipelines that reduced deployment time
-                        by 40%
+                        Integrated backend APIs of GDS (eg. Sabre, Amadeus) to
+                        fetch real-time flight availability and pricing.
                       </li>
                       <li>
-                        Architected and developed reusable component library
-                        used across multiple projects
+                        Improved website performance by optimizing assets and
+                        implementing lazy loading.
                       </li>
                     </ul>
                   </div>
                   <div>
-                    <h4 className="text-xl font-semibold text-purple-400">
-                      Frontend Developer
+                    <h4 className="text-xl font-semibold text-purple-300">
+                      Front-End Developer Intern
                     </h4>
-                    <p className="text-gray-400">Digital Solutions LLC</p>
-                    <p className="text-sm text-gray-500 mb-3">2018 - 2021</p>
+                    <p className="text-gray-300">HAMS Fly Limited</p>
+                    <p className="text-sm text-gray-500 mb-3">
+                      Aug 2024 - Oct 2024
+                    </p>
                     <ul className="list-disc list-inside text-gray-300 space-y-2">
                       <li>
-                        Developed responsive web applications using React and
-                        Redux
+                        Assisted in developing key features of the booking UI
+                        using Next.js and Tailwind CSS.
                       </li>
                       <li>
-                        Collaborated with UX/UI designers to implement
-                        pixel-perfect designs
+                        Fixed layout issues and bugs to improve cross-browser
+                        compatibility.
                       </li>
                       <li>
-                        Optimized application performance, improving load times
-                        by 30%
+                        Learned and applied Git best practices for version
+                        control in a collaborative environment.
                       </li>
                     </ul>
+                  </div>
+                </CardContent>
+              </Card>
+            </ScrollReveal>
+
+            {/* Education */}
+            <ScrollReveal delay={0.2} className="mt-16">
+              <h3 className="text-2xl font-bold mb-6">Education</h3>
+              <Card className="bg-black/25 backdrop-blur-lg border-purple-500/20">
+                <CardContent className="p-6">
+                  <div>
+                    <h4 className="text-xl font-semibold text-purple-300">
+                      Bachelor of Business Administration in Accounting
+                    </h4>
+                    <p className="text-gray-300">National University</p>
+                    <p className="text-sm text-gray-500">2022 - Present</p>
                   </div>
                 </CardContent>
               </Card>

@@ -17,15 +17,23 @@ export function Navbar() {
   const navItems = [
     {
       name: "About me",
-      link: "#about",
+      link: "/#about",
     },
     {
-      name: "Projects",
+      name: "Skills",
+      link: "/#skills",
+    },
+    {
+      name: "Featured",
       link: "/#projects",
     },
     {
       name: "Contact",
-      link: "#contact",
+      link: "/#contact",
+    },
+    {
+      name: "Projects",
+      link: "/projects",
     },
   ];
 

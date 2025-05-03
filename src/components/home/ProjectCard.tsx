@@ -35,7 +35,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
       onHoverEnd={() => setIsHovered(false)}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="relative inline-flex overflow-hidden rounded-[22px] "
+      className="relative inline-flex overflow-hidden rounded-[22px] h-full"
     >
       {/* <span className="absolute -z-10 inset-[-1000%] animate-[spin_5s_linear_infinite] blur-2xl bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_50%,#393BB2_50%,#E2CBFF_100%)]" /> */}
       <BackgroundGradient className="rounded-[22px] p-1 bg-black-100">
