@@ -10,6 +10,7 @@ import {
   MobileNavToggle,
   MobileNavMenu,
 } from "@/components/ui/resizable-navbar";
+import { DownloadIcon } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -50,7 +51,19 @@ export function Navbar() {
           <NavItems items={navItems} />
           <div className="flex items-center gap-4">
             {/* <NavbarButton variant="secondary">Login</NavbarButton> */}
-            <NavbarButton variant="primary">Book a call</NavbarButton>
+            <Link
+              target="_blank"
+              href={
+                "https://drive.usercontent.google.com/download?id=1fKMnbTVHu4KQs5cDhlRiP3LFbbctqOH8&export=download&authuser=0"
+              }
+            >
+              <NavbarButton
+                className="flex justify-center items-center gap-1"
+                variant="primary"
+              >
+                Resume <DownloadIcon size={18} />
+              </NavbarButton>
+            </Link>
           </div>
         </NavBody>
 
