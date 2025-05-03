@@ -6,12 +6,12 @@ export function Footer() {
     <section>
       <div className="relative w-full">
         {/* Main Indigo Line */}
-        <div className="absolute left-12 right-12 md:left-60 md:right-60 top-0 bg-gradient-to-r from-transparent via-sky-700/80 to-transparent h-[2px] blur-sm" />
+        <div className="absolute left-12 right-12 md:left-60 md:right-60 top-0 bg-gradient-to-r from-transparent via-sky-900/60 to-transparent h-[2px] blur-sm" />
         <div className="absolute left-4 right-4 md:left-20 md:right-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] blur-sm" />
         <div className="absolute left-4 right-4 md:left-20 md:right-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px" />
 
         {/* Highlight Sky Line */}
-        <div className="absolute left-12 right-12 md:left-60 md:right-60 top-0 bg-gradient-to-r from-transparent via-sky-700/50  to-transparent h-px" />
+        <div className="absolute left-12 right-12 md:left-60 md:right-60 top-0 bg-gradient-to-r from-transparent via-sky-900/20  to-transparent h-px" />
       </div>
 
       <footer className="py-12">

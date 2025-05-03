@@ -1,5 +1,6 @@
 // import FeaturedContentSec from "@/components/home/FeaturedContentSec";
 import AboutSection from "@/components/home/AboutSection";
+import Blogs from "@/components/home/Blogs";
 // import Blogs from "@/components/home/Blogs";
 import ContactSection from "@/components/home/ContactSection";
 // import { SpotlightCustomColor } from "@/components/home/Featured";
@@ -19,6 +20,7 @@ export default function Home() {
 
         <Skills />
         <ProjectsSection />
+        <Blogs />
         <ContactSection />
       </main>
     </>

@@ -51,19 +51,20 @@ export function Navbar() {
           <NavItems items={navItems} />
           <div className="flex items-center gap-4">
             {/* <NavbarButton variant="secondary">Login</NavbarButton> */}
-            <Link
+            {/* <Link
               target="_blank"
               href={
                 "https://drive.usercontent.google.com/download?id=1fKMnbTVHu4KQs5cDhlRiP3LFbbctqOH8&export=download&authuser=0"
               }
+            > */}
+            <NavbarButton
+              href="https://drive.usercontent.google.com/download?id=1fKMnbTVHu4KQs5cDhlRiP3LFbbctqOH8&export=download&authuser=0"
+              className="flex justify-center items-center gap-1"
+              variant="primary"
             >
-              <NavbarButton
-                className="flex justify-center items-center gap-1"
-                variant="primary"
-              >
-                Resume <DownloadIcon size={18} />
-              </NavbarButton>
-            </Link>
+              Resume <DownloadIcon size={18} />
+            </NavbarButton>
+            {/* </Link> */}
           </div>
         </NavBody>
 
