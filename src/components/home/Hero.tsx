@@ -7,6 +7,7 @@ import MagicButton from "../ui/MagicButton";
 import { ArrowRight } from "lucide-react";
 import ArrowDown from "./ArrowDown";
 import { motion } from "motion/react";
+import Link from "next/link";
 
 const Hero = () => {
   const containerVariants = {
@@ -88,11 +89,13 @@ const Hero = () => {
           </motion.p>
 
           <motion.div variants={childVariants}>
-            <MagicButton
-              title="View my works"
-              icon={<ArrowRight size={16} />}
-              position="right"
-            />
+            <Link href={"#projects"}>
+              <MagicButton
+                title="View my works"
+                icon={<ArrowRight size={16} />}
+                position="right"
+              />
+            </Link>
           </motion.div>
         </div>
       </motion.div>
