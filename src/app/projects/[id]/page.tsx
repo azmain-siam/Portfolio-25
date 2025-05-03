@@ -255,7 +255,7 @@ export default function ProjectDetailPage() {
           </ParallaxLayer>
         </ParallaxLayers>
 
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container max-w-7xl mx-auto px-4 relative z-10">
           <div className="mb-8">
             <Button
               asChild
@@ -268,10 +268,10 @@ export default function ProjectDetailPage() {
             </Button>
           </div>
 
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <div ref={headerRef}>
               <motion.div style={{ scale: imageScale, opacity: imageOpacity }}>
-                <BackgroundGradient className="rounded-[22px] max-w-full p-1 bg-slate-900">
+                <BackgroundGradient className="rounded-[22px] max-w-full p-2 bg-slate-900">
                   <div className="rounded-[20px] h-[700px] overflow-hidden">
                     <Image
                       src={project.image || "/placeholder.svg"}

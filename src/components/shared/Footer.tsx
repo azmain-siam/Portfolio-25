@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Github, Linkedin, Mail, Twitter } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 export function Footer() {
   return (
@@ -25,7 +25,7 @@ export function Footer() {
               </p>
               <div className="flex space-x-4">
                 <Link
-                  href="https://github.com"
+                  href="https://github.com/azmain-siam"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-indigo-300 transition-colors"
@@ -34,7 +34,7 @@ export function Footer() {
                   <span className="sr-only">GitHub</span>
                 </Link>
                 <Link
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/azmain-siam"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-indigo-300 transition-colors"
@@ -43,16 +43,7 @@ export function Footer() {
                   <span className="sr-only">LinkedIn</span>
                 </Link>
                 <Link
-                  href="https://twitter.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-indigo-300 transition-colors"
-                >
-                  <Twitter className="h-5 w-5" />
-                  <span className="sr-only">Twitter</span>
-                </Link>
-                <Link
-                  href="mailto:hello@johndoe.com"
+                  href="mailto:siam.hossain.dev@gmail.com"
                   className="text-gray-400 hover:text-indigo-300 transition-colors"
                 >
                   <Mail className="h-5 w-5" />
@@ -116,7 +107,7 @@ export function Footer() {
               <ul className="space-y-2">
                 <li>
                   <Link
-                    href="/privacy"
+                    href="#"
                     className="text-gray-400 hover:text-indigo-300 transition-colors text-sm"
                   >
                     Privacy Policy
@@ -124,7 +115,7 @@ export function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="/terms"
+                    href="#"
                     className="text-gray-400 hover:text-indigo-300 transition-colors text-sm"
                   >
                     Terms of Service

@@ -8,7 +8,10 @@ import { Badge } from "../ui/badge";
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-20 overflow-hidden w-full">
+    <section
+      id="about"
+      className="py-20 overflow-hidden w-full max-w-6xl mx-auto"
+    >
       <div className="relative">
         <ParallaxLayers className="absolute inset-0 z-0">
           <ParallaxLayer speed={-0.2} className="opacity-5">
