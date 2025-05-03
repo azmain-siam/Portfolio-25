@@ -60,32 +60,35 @@ export default ProjectsSection;
 const projects = [
   {
     id: 1,
-    title: "E-Commerce Platform",
+    title: "SwapSpot",
     description:
-      "A full-stack e-commerce platform with payment integration, user authentication, and admin dashboard.",
-    image: "/placeholder.svg?height=400&width=600",
-    tags: ["React", "Node.js", "MongoDB", "Stripe", "Redux"],
-    github: "#",
-    demo: "#",
+      "A full-stack re-commerce platform with payment integration, user authentication, and admin dashboard.",
+    image:
+      "https://res.cloudinary.com/db0ecop7c/image/upload/v1746240052/htytlpc8g8k2jnlauf7w.png",
+    tags: ["TypeScript", "Next.js", "Node.js", "MongoDB", "Redux", "Stripe"],
+    github: "https://github.com/azmain-siam/SwapSpot-Client",
+    demo: "https://next-client-eta.vercel.app/",
   },
   {
     id: 2,
-    title: "AI Content Generator",
+    title: "PaperNest",
     description:
-      "An AI-powered application that generates content based on user prompts using OpenAI's GPT models.",
-    image: "/placeholder.svg?height=400&width=600",
-    tags: ["Next.js", "TypeScript", "OpenAI API", "Tailwind CSS"],
-    github: "#",
-    demo: "#",
+      "PaperNest is a specialized e-commerce platform offering a curated selection of high-quality stationery items with a focus on student accessibility.",
+    image:
+      "https://res.cloudinary.com/db0ecop7c/image/upload/v1746241356/tvns21tc2ufza9jqzihz.png",
+    tags: ["React", "TypeScript", "Node.js", "MongoDB", "Redux", "Stripe"],
+    github: "https://github.com/azmain-siam/PaperNest-Client",
+    demo: "https://papernext-client.vercel.app/",
   },
   {
     id: 3,
-    title: "Real-time Chat Application",
+    title: "BloodBond",
     description:
-      "A real-time chat application with features like message encryption, file sharing, and user presence.",
-    image: "/placeholder.svg?height=400&width=600",
-    tags: ["React", "Firebase", "WebSockets", "Material UI"],
-    github: "#",
-    demo: "#",
+      "BloodBond is a purpose-driven digital platform connecting blood donors with those in need.",
+    image:
+      "https://res.cloudinary.com/db0ecop7c/image/upload/v1746241707/mavejwkluj4p9h604bhs.png",
+    tags: ["React", "Node.js", "MongoDB", "Firebase", "Material UI"],
+    github: "https://github.com/azmain-siam/BloodBond-Client",
+    demo: "https://blood-bond-f0feb.web.app/",
   },
 ];

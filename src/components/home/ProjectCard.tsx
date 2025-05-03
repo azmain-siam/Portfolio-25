@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { BackgroundGradient } from "../ui/background-gradient";
+import { useRef, useState } from "react";
 
 interface ProjectCardProps {
   project: {
@@ -22,27 +23,39 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ project }: ProjectCardProps) {
+  const [isHovered, setIsHovered] = useState(false);
+  const imageRef = useRef<HTMLDivElement>(null);
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       viewport={{ once: true }}
+      onHoverStart={() => setIsHovered(true)}
+      onHoverEnd={() => setIsHovered(false)}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
       className="relative inline-flex overflow-hidden rounded-[22px] "
     >
       {/* <span className="absolute -z-10 inset-[-1000%] animate-[spin_5s_linear_infinite] blur-2xl bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_50%,#393BB2_50%,#E2CBFF_100%)]" /> */}
       <BackgroundGradient className="rounded-[22px] p-1 bg-black-100">
         <Card className="border-t-0 border-indigo-400/50 bg-black-100 rounded-[20px] overflow-hidden h-full flex flex-col">
-          <div className="relative h-48 overflow-hidden">
-            <Image
-              src={
-                // project.image ||
-                "https://images01.nicepagecdn.com/page/35/45/website-design-preview-3545756.jpg"
-              }
-              alt={project.title}
-              fill
-              className="object-cover transition-transform hover:scale-105 duration-500"
-            />
+          <div ref={imageRef} className="relative h-56 w-full overflow-hidden">
+            <motion.div
+              className="absolute inset-0"
+              animate={{
+                y: isHovered ? "-70%" : "0%",
+              }}
+              transition={{ duration: 3, ease: "easeInOut" }}
+            >
+              <Image
+                src={project.image || "/placeholder.svg"}
+                alt={project.title}
+                width={500}
+                height={800}
+                className="h-auto w-full object-cover"
+              />
+            </motion.div>
           </div>
           <CardContent className="p-6 flex-grow">
             <h3 className="text-xl font-bold mb-2">{project.title}</h3>
