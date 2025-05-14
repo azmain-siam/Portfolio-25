@@ -75,14 +75,11 @@ const Skills = () => {
                 </h3>
                 <SkillsGrid
                   skills={[
-                    { name: "Communication" },
                     { name: "Teamwork" },
                     { name: "Problem Solving" },
                     { name: "Time Management" },
                     { name: "Adaptability" },
-                    { name: "Leadership" },
                     { name: "Critical Thinking" },
-                    { name: "Creativity" },
                     { name: "Attention to Detail" },
                   ]}
                   columns={3}

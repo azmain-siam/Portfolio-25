@@ -58,7 +58,7 @@ export function Navbar() {
               }
             > */}
             <NavbarButton
-              href="https://drive.usercontent.google.com/download?id=1fKMnbTVHu4KQs5cDhlRiP3LFbbctqOH8&export=download&authuser=0"
+              href="https://drive.google.com/drive/folders/1xN6F2otx_mBdHwTitbJcYAQixunQHTeB"
               className="flex justify-center items-center gap-1"
               variant="primary"
             >
@@ -104,8 +104,9 @@ export function Navbar() {
                 onClick={() => setIsMobileMenuOpen(false)}
                 variant="primary"
                 className="w-full"
+                href="https://drive.google.com/drive/folders/1xN6F2otx_mBdHwTitbJcYAQixunQHTeB"
               >
-                Book a call
+                Resume <DownloadIcon size={18} />
               </NavbarButton>
             </div>
           </MobileNavMenu>
